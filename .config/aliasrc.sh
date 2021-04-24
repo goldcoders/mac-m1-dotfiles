@@ -245,6 +245,7 @@ P="cd ~/Pictures && ls -a" \
 cf="cd ~/.config && ls -a" \
 sc="cd ~/.local/bin && ls -a" \
 www="cd ~/.www && ls -a" \
+vsc="cd ~/Library/Application\ Support/Code/User" \
 
 
 
@@ -268,3 +269,4 @@ cfj="$EDITOR /home/uriah/.config/jrnl/jrnl.yaml" \
 
 alias rz='source $HOME/.zshrc' \
 rp='source ~/.zprofile' \
+zl='zq -l' \
