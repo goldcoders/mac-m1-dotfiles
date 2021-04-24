@@ -261,7 +261,7 @@ cfs="$EDITOR ~/.config/starship/config.toml" \
 cfv="$EDITOR ~/.config/nvim/init.vim" \
 cfz="$EDITOR $HOME/.zshrc" \
 etc="$EDITOR /etc/hosts" \
-cfj="$EDITOR /home/uriah/.config/jrnl/jrnl.yaml" \
+cfj="$EDITOR $HOME/.config/jrnl/jrnl.yaml" \
 
 ################################################################
 ### Source Config Files Quickly
