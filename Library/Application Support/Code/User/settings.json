@@ -84,4 +84,11 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
+    "better-comments.highlightPlainText": true,
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "sync.forceDownload": true,
+    "sync.quietSync": true,
+    "sync.gist": "a561e6e27acb384dbb04dcd329b84362",
 }
