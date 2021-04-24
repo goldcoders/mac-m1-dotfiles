@@ -1,6 +1,4 @@
 {
-    "tabnine.experimentalAutoImports": true,
-    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -14,11 +12,76 @@
         "editor.wordBasedSuggestions": false
     },
     "dart.openDevTools": "flutter",
-    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/uriah/.config/nvim/init.vim",
+    "dart.debugSdkLibraries": false,
+    "dart.previewLsp": true,
+    "dart.flutterSdkPaths": [
+        "/Users/uriah/fvm/versions/beta",
+        "/Users/uriah/fvm/versions/dev",
+        "/Users/uriah/fvm/versions/stable",
+    ],
+    "dart.debugExternalLibraries": false,
+    "dart.warnWhenEditingFilesInPubCache": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+        "addMissingImports": true
+    },
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "underline",
+    "editor.fontFamily": "Operator Mono Lig",
+    "editor.fontLigatures": true,
+    "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
+    "editor.scrollBeyondLastLine": false,
+    // default is inline
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": "off",
+    "files.autoSave": "off",
+    "files.eol": "\n",
+    "files.exclude": {
+        "**.dart_tool": true,
+        "**.fvm": true,
+        "**.idea": true
+    },
+    "files.insertFinalNewline": true,
+    "javascript.validate.enable": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.zoomLevel": -1
+    "search.exclude": {
+        ".flutter-plugins": true,
+        ".flutter-plugins-dependencies": true,
+        ".gitignore": true,
+        ".metadata": true,
+        "**/.fvm": true,
+        "**/.vscode": true,
+        "**/*.iml": true,
+        "**/build": true,
+        "**/test": true,
+        "debug.log": true,
+        "pubspec.lock": true
+    },
+    "search.mode": "newEditor",
+    "tabnine.experimentalAutoImports": true,
+    "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/uriah/.config/nvim/init.vim",
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
+    "workbench.editor.enablePreview": false,
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
 }
