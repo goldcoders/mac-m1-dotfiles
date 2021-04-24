@@ -27,7 +27,10 @@ journals:
     display_format: markdown
     journal: ~/Journals/dart.md
     template: "/Users/uriah/Journals/dart-template.txt"
-  default: ~/Journals/notes.md
+  default:
+    display_format: markdown
+    journal: ~/Journals/notes.md
+    template: "/Users/uriah/Journals/template.txt"
   fl:
     display_format: markdown
     journal: ~/Journals/flutter.md
