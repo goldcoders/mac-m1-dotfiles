@@ -1,0 +1,103 @@
+colors:
+  body: none
+  date: none
+  tags: none
+  title: none
+default_hour: 9
+default_minute: 0
+editor: nvim -c startinsert
+encrypt: false
+highlight: true
+indent_character: '|'
+template: "/Users/uriah/Journals/template.txt"
+journals:
+  ajs:
+    display_format: markdown
+    journal: ~/Journals/alpinejs.md
+    template: "/Users/uriah/Journals/ajs-template.txt"
+  arch:
+    display_format: markdown
+    journal: ~/Journals/arch.md
+    template: "/Users/uriah/Journals/arch-template.txt"
+  as:
+    display_format: markdown
+    journal: ~/Journals/applescript.md
+    template: "/Users/uriah/Journals/as-template.txt"
+  dart:
+    display_format: markdown
+    journal: ~/Journals/dart.md
+    template: "/Users/uriah/Journals/dart-template.txt"
+  default: ~/Journals/notes.md
+  fl:
+    display_format: markdown
+    journal: ~/Journals/flutter.md
+    template: "/Users/uriah/Journals/fl-template.txt"
+  gc:
+    encrypt: true
+    journal: ~/Journals/goldcoders.md
+    template: "/Users/uriah/Journals/gc-template.txt"
+  go:
+    display_format: markdown
+    journal: ~/Journals/golang.md
+    template: "/Users/uriah/Journals/go-template.txt"
+  hugo:
+    display_format: markdown
+    journal: ~/Journals/hugo.md
+    template: "/Users/uriah/Journals/hugo-template.txt"
+  js:
+    display_format: markdown
+    journal: ~/Journals/javascript.md
+    template: "/Users/uriah/Journals/js-template.txt"
+  lv:
+    display_format: markdown
+    journal: ~/Journals/laravel.md
+    template: "/Users/uriah/Journals/lv-template.txt"
+  m1:
+    display_format: markdown
+    journal: ~/Journals/m1.md
+    template: "/Users/uriah/Journals/m1-template.txt"
+  ps:
+    display_format: markdown
+    journal: ~/Journals/powershell.md
+    template: "/Users/uriah/Journals/ps-template.txt"
+  py:
+    display_format: markdown
+    journal: ~/Journals/python.md
+    template: "/Users/uriah/Journals/py-template.txt"
+  rs:
+    display_format: markdown
+    journal: ~/Journals/rust.md
+    template: "/Users/uriah/Journals/rs-template.txt"
+  sb:
+    display_format: markdown
+    journal: ~/Journals/supabase.md
+    template: "/Users/uriah/Journals/sb-template.txt"
+  sh:
+    display_format: markdown
+    journal: ~/Journals/shellscript.md
+    template: "/Users/uriah/Journals/sh-template.txt"
+  sql:
+    display_format: markdown
+    journal: ~/Journals/sql.md
+    template: "/Users/uriah/Journals/sql-template.txt"
+  sv:
+    display_format: markdown
+    journal: ~/Journals/svelte.md
+    template: "/Users/uriah/Journals/sv-template.txt"
+  tw:
+    display_format: markdown
+    journal: ~/Journals/tailwind.md
+    template: "/Users/uriah/Journals/tw-template.txt"
+  vue:
+    display_format: markdown
+    journal: ~/Journals/vue.md
+    template: "/Users/uriah/Journals/vue-template.txt"
+  w10:
+    display_format: markdown
+    journal: ~/Journals/w10.md
+    template: "/Users/uriah/Journals/w10-template.txt"
+linewrap: 79
+tagsymbols: '@'
+template: false
+timeformat: '%Y-%m-%d %H:%M'
+version: v2.8
