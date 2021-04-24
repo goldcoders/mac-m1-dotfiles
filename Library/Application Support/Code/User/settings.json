@@ -76,7 +76,7 @@
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/uriah/.config/nvim/init.vim",
-    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ TSA/ASD 🧩",
     "workbench.editor.enablePreview": false,
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
@@ -91,4 +91,5 @@
     "sync.forceDownload": true,
     "sync.quietSync": true,
     "sync.gist": "a561e6e27acb384dbb04dcd329b84362",
+    "workbench.iconTheme": "material-icon-theme",
 }
