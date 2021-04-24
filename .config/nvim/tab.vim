@@ -1,37 +1,24 @@
 "-------------Tab Management--------------"
+nmap <leader>1 1gt<cr>
 
-nmap ¡ 1gt<cr>
-inoremap ¡ <Esc>1gt<CR>
+nmap <leader>2 2gt<cr>
 
-nmap ™ 2gt<cr>
-inoremap ™ <Esc>2gt<CR>
+nmap <leader>3 3gt<cr>
 
-nmap £ 3gt<cr>
-inoremap £ <Esc>3gt<CR>
+nmap <leader>4 4gt<cr>
 
-nmap ¢ 4gt<cr>
-inoremap ¢ <Esc>4gt<CR>
+nmap <leader>5 5gt<cr>
 
-nmap ∞ 5gt<cr>
-inoremap ∞ <Esc>5gt<CR>
+nmap <leader>6 6gt<cr>
 
-nmap § 6gt<cr>
-inoremap § <Esc>6gt<CR>
+nmap <leader>7 7gt<cr>
 
-nmap ¶ 7gt<cr>
-inoremap ¶ <Esc>7gt<CR>
+nmap <leader>8 8gt<cr>
 
-nmap • 8gt<cr>
-inoremap • <Esc>8gt<CR>
+nmap <leader>9 9gt<cr>
 
-nmap ª 9gt<cr>
-inoremap ª <Esc>9gt<CR>
+nmap <leader>0 10gt<cr>
 
-nmap º 10gt<cr>
-inoremap º <Esc>10gt<CR>
+nmap <leader>t :tabnew<cr>
 
-nmap † :tabnew<cr>
-inoremap † <Esc>:tabnew<CR>
-
-nmap œ :tabonly<cr>
-inoremap œ <Esc>:tabonly<CR>
+nmap <leader>q :tabonly<cr>

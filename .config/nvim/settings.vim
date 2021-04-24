@@ -24,7 +24,8 @@ set formatoptions+=o            " Continue comment marker in new lines.
 set nowrap                      " don't wrap lines
 set modeline                    " Enable modeline.
 set linespace=0                 " Set line-spacing to minimum.
-set relativenumber
+set relativenumber              " Set relative number as default
+nmap L :let &number=1-&number<CR>  " Toggle Line Number
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 set clipboard=unnamedplus       " Use the Global Clipboard with Vim
 set mouse=                      " Enable Mouse Options
@@ -33,6 +34,18 @@ set hidden
 set cmdheight=2                 " Give more space for displaying messages.
 set timeout timeoutlen=1000 ttimeoutlen=10
 
+" Relative or absolute number lines
+function! NumberToggle()
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
+endfunction
+
+nnoremap <leader>n :call NumberToggle()<CR>
 
 if !&scrolloff
   set scrolloff=3               " Show next 3 lines while scrolling.
