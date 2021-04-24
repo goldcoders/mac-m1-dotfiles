@@ -1,0 +1,110 @@
+# ~/.config/starship.toml
+format = """
+$username\
+$hostname\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$dart\
+$golang\
+$nodejs\
+$php\
+$rust\
+$cmd_duration\
+$line_break\
+$battery\
+$status\
+$character"""
+
+add_newline = false
+
+[line_break]
+disabled = false
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 15
+style = "bold red"
+
+[character]
+symbol = "$symbol "
+success_symbol = "[❯](bold green)"
+error_symbol = "[❮](bold red)"
+vicmd_symbol = "[❮](bold green)"
+disabled = false
+
+[directory]
+truncation_length = 5
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = ""
+style = "bold purple"
+truncation_symbol = "…"
+truncation_length = "2^63 - 1"
+
+[git_commit]
+format = "[#$hash]($style) "
+style = "bold green"
+commit_hash_length = "7"
+only_detached = false
+disabled = false
+
+[git_state]
+format = "[\\($state( $progress_current of $progress_total)\\)]($style) "
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+conflicted = "💥[×($count) ](bright-white)"
+ahead = "🔼[×($count) ](bright-white)"
+behind = "🔽[×($count) ](bright-white)"
+diverged = "🍥[×($count) ](bright-white)"
+untracked = "🆕[×($count) ](bright-white)"
+stashed = " 💾[×($count) ](bright-white)"
+modified = "📝[×($count) ](bright-white)"
+staged = "🏷️[×($count) ](bright-white)"
+renamed = "📛[×($count) ](bright-white)"
+deleted = "🗑[×($count) ](bright-white)"
+
+[hostname]
+ssh_only = false
+format =  "[</$hostname/>](bold bright-white) "
+trim_at = "-"
+disabled = false
+
+[username]
+style_user = "yellow bold"
+style_root = "magenta bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[nodejs]
+symbol = "\ue718 "
+disabled = true
+
+[golang]
+symbol = "🐹 "
+disabled = true
+
+[php]
+symbol = " "
+disabled = true
+
+[rust]
+symbol = "🦀 "
+disabled = true
+
+[dart]
+format = "via [$symbol$version]($style) "
+symbol = "🎯 "
+style = "bold blue"
+disabled = true
