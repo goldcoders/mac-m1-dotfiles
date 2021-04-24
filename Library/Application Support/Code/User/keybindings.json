@@ -109,11 +109,11 @@
         "command": "-workbench.action.openEditorAtIndex9"
     },
     {
-        "key": "cmd+s cmd+v",
+        "key": "ctrl+s ctrl+v",
         "command": "workbench.action.splitEditorDown"
     },
     {
-        "key": "cmd+s cmd+h",
+        "key": "ctrl+s ctrl+h",
         "command": "workbench.action.splitEditor"
     },
     {
@@ -256,7 +256,7 @@
         "when": "!terminalFocus"
     },
     {
-        "key": "cmd+s cmd+d",
+        "key": "ctrl+s ctrl+d",
         "command": "workbench.action.splitEditorOrthogonal"
     },
     {
