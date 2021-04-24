@@ -1,0 +1,7 @@
+{
+"codeLens.enable": true,
+"suggest.echodocSupport": true,
+"diagnostic.virtualText": true,
+"go.enable": true,
+"suggest.languageSourcePriority": 99
+}
