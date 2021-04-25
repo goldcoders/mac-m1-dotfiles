@@ -27,7 +27,6 @@ set linespace=0                 " Set line-spacing to minimum.
 set relativenumber              " Set relative number as default
 nmap L :let &number=1-&number<CR>  " Toggle Line Number
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
-set clipboard=unnamedplus       " Use the Global Clipboard with Vim
 set mouse=                      " Enable Mouse Options
 set list
 set hidden
