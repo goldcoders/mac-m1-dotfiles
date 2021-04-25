@@ -1,5 +1,4 @@
 {
-    "better-comments.highlightPlainText": true,
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -72,25 +71,24 @@
         "pubspec.lock": true
     },
     "search.mode": "newEditor",
-    "sync.autoDownload": true,
-    "sync.autoUpload": true,
-    "sync.forceUpload": true,
-    "sync.forceDownload": true,
-    "sync.quietSync": true,
-    "sync.gist": "a561e6e27acb384dbb04dcd329b84362",
     "tabnine.experimentalAutoImports": true,
     "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/uriah/.config/nvim/init.vim",
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ TSA/ASD 🧩",
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "material-icon-theme",
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
+    "better-comments.highlightPlainText": true,
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "sync.forceDownload": true,
+    "sync.quietSync": true,
+    "sync.gist": "a561e6e27acb384dbb04dcd329b84362",
 }
