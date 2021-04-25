@@ -14,6 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdcommenter'
 
+" Global Shared Settings
+set clipboard=unnamedplus       " Use the Global Clipboard with Vim
 
 if exists('g:vscode')
   source ~/.config/nvim/vscode.vim
