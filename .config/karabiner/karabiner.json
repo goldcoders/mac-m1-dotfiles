@@ -16,6 +16,35 @@
                 },
                 "rules": [
                     {
+                        "description": "RIGHT SHIFT : (DUO) COMMAND+OPTION OR SHIFT",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "RIGHT CMD : (SUPER) COMMAND+OPTION+CONTROL or ESCAPE",
                         "manipulators": [
                             {
