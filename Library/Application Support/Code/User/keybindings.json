@@ -269,47 +269,17 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+alt+cmd+e",
+        "key": "cmd+=",
         "command": "editor.action.smartSelect.expand",
         "when": "editorTextFocus && neovim.mode == 'insert'",
     },
     {
-        "key": "ctrl+shift+right",
-        "command": "-editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+cmd+s",
+        "key": "cmd+-",
         "command": "editor.action.smartSelect.shrink",
         "when": "editorTextFocus && neovim.mode == 'insert'",
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "-editor.action.smartSelect.shrink",
-        "when": "editorTextFocus"
     },
     {
         "key": "cmd+f11",
         "command": "workbench.action.toggleZenMode"
-    },
-    {
-        "key": "ctrl+shift+cmd+e",
-        "command": "editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+cmd+right",
-        "command": "-editor.action.smartSelect.expand",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+cmd+s",
-        "command": "editor.action.smartSelect.shrink",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+cmd+left",
-        "command": "-editor.action.smartSelect.shrink",
-        "when": "editorTextFocus"
-    },
+    }
 ]
