@@ -270,3 +270,5 @@ cfj="$EDITOR $HOME/.config/jrnl/jrnl.yaml" \
 alias rz='source $HOME/.zshrc' \
 rp='source ~/.zprofile' \
 zl='zq -l' \
+shd='sudo ln -sf /bin/dash /var/select/sh' \
+shb='sudo ln -sf /bin/bash /var/select/sh' \
