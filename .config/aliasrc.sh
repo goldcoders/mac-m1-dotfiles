@@ -105,8 +105,8 @@ if [ -x "$(command -v git)" ]; then
 alias \
     g="git" \
 	gl="git log --all --decorate --oneline --graph" \
-	gd="git diff" \
-	gam="git commit -am" \
+	gdif="git diff" \
+	gcm="git commit -am" \
 	gaa="git add ." \
 	ss="git status" \
 	ginit="git init && git add . && git commit -m 'init'" \
@@ -221,8 +221,18 @@ alias ios='open -a Simulator'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias pgup='pg_ctl -D /opt/homebrew/var/postgres start'
 alias pgdown='pg_ctl -D /opt/homebrew/var/postgres stop -s -m fast'
+# default user in postgres is account name with no password
+#alias pgauth='psql -h localhost'
+# this alias is used by supabase
+alias pgauth='psql -h localhost -d postgres -U postgres -W'
 alias dbup='mysql.server start'
 alias dbdown='mysql.server stop'
+alias dbauth='mysql -u uriah -proot'
+alias fpm='/opt/homebrew/opt/php/sbin/php-fpm --nodaemonize'
+alias phpini='$EDITOR /opt/homebrew/etc/php/8.0/php.ini'
+alias redisup='redis-server /opt/homebrew/etc/redis.conf'
+alias redisdown='redis-cli shutdown'
+
 
 #alias python='python3'
 
@@ -236,7 +246,7 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
 
-alias a="cd ~/App && ls -a" \
+alias a="cd ~/Code && ls -a" \
 h="cd ~/ && ls -a" \
 d="cd ~/Documents && ls -a" \
 dl="cd ~/Downloads && ls -a" \
@@ -244,7 +254,6 @@ m="cd ~/Music && ls -a" \
 P="cd ~/Pictures && ls -a" \
 cf="cd ~/.config && ls -a" \
 sc="cd ~/.local/bin && ls -a" \
-www="cd ~/.www && ls -a" \
 vsc="cd ~/Library/Application\ Support/Code/User" \
 
 
@@ -255,13 +264,15 @@ vsc="cd ~/Library/Application\ Support/Code/User" \
 
 alias cfa="$EDITOR ~/.config/aliasrc.sh" \
 cfA="$EDITOR ~/.config/alacritty/alacritty.yml" \
-cfk="$EDITOR ~/.config/sxhkd/sxhkdrc" \
+cfk="$EDITOR ~/Library/Application\ Support/Code/User/keybindings.json" \
 cfp="$EDITOR ~/.zprofile" \
 cfs="$EDITOR ~/.config/starship/config.toml" \
 cfv="$EDITOR ~/.config/nvim/init.vim" \
 cfz="$EDITOR $HOME/.zshrc" \
 etc="$EDITOR /etc/hosts" \
 cfj="$EDITOR $HOME/.config/jrnl/jrnl.yaml" \
+cfV="$EDITOR ~/Library/Application\ Support/Code/User/settings.json" \
+
 
 ################################################################
 ### Source Config Files Quickly
@@ -269,6 +280,11 @@ cfj="$EDITOR $HOME/.config/jrnl/jrnl.yaml" \
 
 alias rz='source $HOME/.zshrc' \
 rp='source ~/.zprofile' \
+ra='source ~/.config/aliasrc.sh' \
+rz='source ~/.zshrc' \
 zl='zq -l' \
 shd='sudo ln -sf /bin/dash /var/select/sh' \
 shb='sudo ln -sf /bin/bash /var/select/sh' \
+cwd='pwd | pbcopy' \
+f='.fvm/flutter_sdk/bin/flutter' \
+#flutter='.fvm/flutter_sdk/bin/flutter'\

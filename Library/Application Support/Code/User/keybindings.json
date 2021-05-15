@@ -171,10 +171,6 @@
         "when": "!editorFocus"
     },
     {
-        "key": "shift+alt+r",
-        "command": "flutter.hotRestart"
-    },
-    {
         "key": "alt+\\",
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus && neovim.mode == 'insert'"
@@ -281,5 +277,122 @@
     {
         "key": "cmd+f11",
         "command": "workbench.action.toggleZenMode"
-    }
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState != 'initializing'"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState != 'initializing'"
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.debug.continue",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.continue",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "workbench.action.debug.run",
+        "when": "debuggersAvailable && debugState != 'initializing'"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "-workbench.action.debug.run",
+        "when": "debuggersAvailable && debugState != 'initializing'"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "dart.rerunLastDebugSession",
+        "when": "dart-code:anyProjectLoaded && dart-code:hasLastDebugConfig && !inDebugMode"
+    },
+    {
+        "key": "shift+cmd+f5",
+        "command": "-dart.rerunLastDebugSession",
+        "when": "dart-code:anyProjectLoaded && dart-code:hasLastDebugConfig && !inDebugMode"
+    },
+    {
+        "key": "cmd+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+cmd+r",
+        "command": "dart.runAllTestsWithoutDebugging"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.action.terminal.searchWorkspace",
+        "when": "terminalFocus && terminalProcessSupported && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.terminal.searchWorkspace",
+        "when": "terminalFocus && terminalProcessSupported && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.view.search",
+        "when": "workbench.view.search.active"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.view.search",
+        "when": "workbench.view.search.active"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-notebook.formatCell",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "notebook.format",
+        "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-notebook.format",
+        "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+    },
 ]
