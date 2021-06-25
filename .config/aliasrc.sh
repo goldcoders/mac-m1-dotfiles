@@ -106,6 +106,7 @@ alias \
     g="git" \
 	gl="git log --all --decorate --oneline --graph" \
 	gdif="git diff" \
+    gr="git restore" \
 	gcm="git commit -am" \
 	gaa="git add ." \
 	ss="git status" \
@@ -232,7 +233,7 @@ alias fpm='/opt/homebrew/opt/php/sbin/php-fpm --nodaemonize'
 alias phpini='$EDITOR /opt/homebrew/etc/php/8.0/php.ini'
 alias redisup='redis-server /opt/homebrew/etc/redis.conf'
 alias redisdown='redis-cli shutdown'
-
+alias tinker='php artisan tinker'
 
 #alias python='python3'
 
@@ -287,4 +288,9 @@ shd='sudo ln -sf /bin/dash /var/select/sh' \
 shb='sudo ln -sf /bin/bash /var/select/sh' \
 cwd='pwd | pbcopy' \
 f='.fvm/flutter_sdk/bin/flutter' \
+fresh='php artisan migrate:fresh --seed' \
+sail='bash vendor/bin/sail' \
+ports='sudo lsof -i -P | grep LISTEN' \
+php8='valet use php@8.0' \
+php7='valet use php@7.4' \
 #flutter='.fvm/flutter_sdk/bin/flutter'\
