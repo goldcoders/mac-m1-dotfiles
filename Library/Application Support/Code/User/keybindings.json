@@ -121,7 +121,7 @@
         "command": "-workbench.action.splitEditor"
     },
     {
-        "key": "ctrl+.",
+        "key": "cmd+.",
         "command": "keyboard-quickfix.openQuickFix"
     },
     {
@@ -211,11 +211,6 @@
     {
         "key": "alt+f1",
         "command": "-editor.action.showAccessibilityHelp"
-    },
-    {
-        "key": "tab",
-        "command": "tabOutOrReindent",
-        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !suggestWidgetVisible && !inSnippetMode"
     },
     {
         "key": "cmd+k z",
@@ -356,7 +351,7 @@
         "when": "workbench.view.search.active"
     },
     {
-        "key": "shift+cmd+f",
+        "key": "alt+f",
         "command": "notebook.formatCell",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
     },
@@ -366,7 +361,7 @@
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
     },
     {
-        "key": "shift+cmd+f",
+        "key": "alt+f",
         "command": "editor.action.formatDocument",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
@@ -376,7 +371,7 @@
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
     {
-        "key": "shift+cmd+f",
+        "key": "alt+f",
         "command": "editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
@@ -386,7 +381,7 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
-        "key": "shift+cmd+f",
+        "key": "alt+f",
         "command": "notebook.format",
         "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
     },
@@ -394,5 +389,80 @@
         "key": "shift+alt+f",
         "command": "-notebook.format",
         "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "tab",
+        "command": "tabOutOrReindent",
+        "when": "neovim.mode == insert && editorTextFocus && !editorReadonly && !editorTabMovesFocus && !suggestWidgetVisible && !inSnippetMode"
+    },
+    {
+        "key": "ctrl+cmd+i",
+        "command": "namespaceResolver.import",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "-namespaceResolver.import",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+s",
+        "command": "namespaceResolver.sort",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "-namespaceResolver.sort",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+a",
+        "command": "namespaceResolver.importAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "-namespaceResolver.importAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+u",
+        "command": "namespaceResolver.highlightNotUsed",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+u",
+        "command": "-namespaceResolver.highlightNotUsed",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "namespaceResolver.highlightNotImported",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-namespaceResolver.highlightNotImported",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+g",
+        "command": "namespaceResolver.generateNamespace",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+g",
+        "command": "-namespaceResolver.generateNamespace",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+e",
+        "command": "namespaceResolver.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "-namespaceResolver.expand",
+        "when": "editorTextFocus"
     },
 ]
