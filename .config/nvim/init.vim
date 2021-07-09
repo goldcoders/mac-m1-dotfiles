@@ -38,9 +38,22 @@ else
         \ 'do': 'yarn install',
         \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
   Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+  " Dart
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'natebosch/vim-lsc'
+  Plug 'natebosch/vim-lsc-dart'
+
+  Plug 'tpope/vim-fugitive'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'jiangmiao/auto-pairs'
+
+    " Snippets
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'natebosch/dartlang-snippets'
   " Make sure to load this plugin last
   Plug 'ryanoasis/vim-devicons'
-
+  Plug 'junegunn/goyo.vim'
 endif
 
 call plug#end()
@@ -55,4 +68,5 @@ if !exists('g:vscode')
   source ~/.config/nvim/buffer.vim
   source ~/.config/nvim/tab.vim
   source ~/.config/nvim/move-line.vim
+  source ~/.config/nvim/flutter.vim
 endif

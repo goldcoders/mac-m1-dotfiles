@@ -1,22 +1,37 @@
-let mapleader = ' '
+let mapleader = ','
 let maplocalleader = '\'
 
 " Prevent CTRL+Z suspending Vim
 nnoremap <c-z> <nop>
 
 " Search and Replace
-nmap <Leader>s :%s//g<Left><Left>
+nnoremap S :%s//g<Left><Left>
 
 " set cursorcolumn
-nmap <Space> <PageDown>
 vmap <BS> x
 
 "Pasting large amounts of text into Vim "
 set pastetoggle=<F2>
 
 nnoremap <F3> :set hlsearch!<CR>
-nnoremap ,<leader> :set nohlsearch<CR>
+nnoremap <leader><space> :set nohlsearch<CR>
 
+" Save File
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
+" Undo Redo Remap
+nnoremap <C-Z> u
+nnoremap <C-Y> <C-R>
+
+
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+nnoremap  <leader>sv :source $MYVIMRC <cr>
 
 " Check when plugins Loaded then load their specific key bindings
 if has_key(plugs, 'nerdtree')
@@ -60,7 +75,25 @@ if has_key(plugs, 'vim-prettier')
     source ~/.config/nvim/plugins/prettier.vim
 endif
 
+if has_key(plugs, 'vim-prettier')
+    source ~/.config/nvim/plugins/vim-fugitive.vim
+endif
 
+if has_key(plugs, 'coc.nvim')
+    source ~/.config/nvim/plugins/coc.vim
+endif
+
+if has_key(plugs, 'coc.nvim')
+    source ~/.config/nvim/plugins/coc.vim
+endif
+
+if has_key(plugs, 'goyo.vim')
+    source ~/.config/nvim/plugins/goyo.vim
+endif
+
+if has_key(plugs, 'ultisnips')
+    source ~/.config/nvim/plugins/ultisnips.vim
+endif
 
 "source ~/.config/nvim/plug/vimwiki.vim
 "source ~/.config/nvim/plug/grammarous.vim
