@@ -218,7 +218,7 @@ alias rmswp='rm ~/.local/share/nvim/swap/*.swp'
 ### Services shortcuts
 ################################################################
 
-alias ios='open -a Simulator'
+alias sim='open -a Simulator'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias pgup='pg_ctl -D /opt/homebrew/var/postgres start'
 alias pgdown='pg_ctl -D /opt/homebrew/var/postgres stop -s -m fast'
@@ -293,4 +293,6 @@ sail='bash vendor/bin/sail' \
 ports='sudo lsof -i -P | grep LISTEN' \
 php8='valet use php@8.0' \
 php7='valet use php@7.4' \
+macos='open macos/Runner.xcworkspace' \
+ios='open ios/Runner.xcworkspace' \
 #flutter='.fvm/flutter_sdk/bin/flutter'\
