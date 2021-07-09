@@ -1,4 +1,33 @@
 {
+    "advancedNewFile.convenienceOptions": [
+        "last",
+        "current",
+        "root"
+    ],
+    "[blade]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4
+    },
+    "better-comments.highlightPlainText": true,
+    "better-phpunit.phpunitBinary": "/opt/homebrew/bin/phpunit",
+    "[css]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "debug.openDebug": "openOnDebugBreak",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "underline",
+    "editor.fontFamily": "Operator Mono Lig",
+    "editor.fontLigatures": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.scrollBeyondLastLine": true,
+    "editor.quickSuggestions": true,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -9,42 +38,65 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true,
+            "addMissingImports": true
+        },
+        "files.insertFinalNewline": true,
     },
-    "dart.openDevTools": "flutter",
+    "dart.debugExternalLibraries": false,
     "dart.debugSdkLibraries": false,
-    "dart.previewLsp": true,
     "dart.flutterSdkPaths": [
         "/Users/uriah/fvm/versions"
     ],
-    "dart.debugExternalLibraries": false,
+    "dart.openDevTools": "flutter",
+    "dart.previewLsp": true,
+    "dart.showSkippedTests": false,
     "dart.warnWhenEditingFilesInPubCache": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true,
-        "addMissingImports": true
+    "emmet.includeLanguages": {
+        "blade": "html",
+        "vue-html": "html"
     },
-    "editor.cursorBlinking": "solid",
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorStyle": "underline",
-    "editor.fontFamily": "Operator Mono Lig",
-    "editor.fontLigatures": true,
-    "editor.lineNumbers": "relative",
-    "editor.minimap.enabled": false,
-    "editor.scrollBeyondLastLine": false,
-    // default is inline
-    "editor.snippetSuggestions": "none",
-    "editor.tabCompletion": "off",
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.run": "onSave",
+    // this will change if we use different version of node in fnm
+    "eslint.runtime": "/var/folders/qs/_5xswr753sg1xk8z6t_hbjgm0000gn/T/fnm_multishell_973_1624265623240/bin/eslint",
+    "eslint.options": {
+        "extensions": [
+            ".html",
+            ".js",
+            ".vue",
+            ".jsx"
+        ]
+    },
+    "eslint.validate": [
+        "html",
+        "vue",
+        "javascript",
+        "javascriptreact"
+    ],
     "files.autoSave": "off",
     "files.eol": "\n",
     "files.exclude": {
         "**.dart_tool": true,
-        "**.idea": true
+        "**.idea": true,
+        "**/*.g.dart": true,
+        "**/*.inject.dart": true,
+        "**/*.inject.summary": true
     },
-    "files.insertFinalNewline": true,
-    "javascript.validate.enable": false,
+    "files.defaultLanguage": "markdown",
+    "[html]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": false
+        }
+    },
+    "javascript.validate.enable": true,
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2,
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -52,7 +104,61 @@
         "editor.tabSize": 2
     },
     "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4
+    },
+    "phpcs.executablePath": "/Users/uriah/.composer/vendor/bin/phpcs",
+    "phpcs.ignorePatterns": [
+        "*/storage/",
+        "*/vendor/*",
+        "*/node_modules/*",
+        "*/database/*",
+        "*/resources/*"
+    ],
+    "phpcs.standard": "./phpcs.xml",
+    "phpfmt.php_bin": "/opt/homebrew/bin/php",
+    "phpfmt.passes": [
+        "PSR2KeywordsLowerCase",
+        "PSR2LnAfterNamespace",
+        "PSR2CurlyOpenNextLine",
+        "PSR2ModifierVisibilityStaticOrder",
+        "PSR2SingleEmptyLineAndStripClosingTag",
+        "ReindentSwitchBlocks",
+        "AlignConstVisibilityEquals",
+        "AlignDoubleArrow",
+        "AlignEquals",
+        "AlignGroupDoubleArrow",
+        "AutoSemicolon",
+        "ClassToStatic",
+        "DoubleToSingleQuote",
+        "SortUseNameSpace",
+        "SpaceBetweenMethods",
+        "ShortArray",
+        "RestoreComments",
+        "OrderMethodAndVisibility",
+        "ReindentAndAlignObjOps",
+        "ReindentSwitchBlocks",
+    ],
+    "phpfmt.psr2": false,
+    "phpfmt.exclude": [
+        "ReindentComments",
+        "StripNewlineWithinClassBody"
+    ],
+    "phpfmt.smart_linebreak_after_curly": true,
+    "phpfmt.indent_with_space": 4,
+    "phpfmt.detect_indent": false,
+    "phpfmt.yoda": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "mervin.markdown-formatter",
+        "editor.formatOnSave": false,
+        "editor.quickSuggestions": true,
+        "editor.tabSize": 2
     },
     "search.exclude": {
         ".flutter-plugins": true,
@@ -68,29 +174,43 @@
         "pubspec.lock": true
     },
     "search.mode": "newEditor",
-    "tabnine.experimentalAutoImports": true,
     "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.defaultFormatter": "octref.vetur"
+    },
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/uriah/.config/nvim/init.vim",
-    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨ Alexis's Black ⛷",
     "workbench.editor.enablePreview": false,
     "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
+        "editor.defaultFormatter": "DotJoshJohnson.xml",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
     },
     "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
     },
-    "better-comments.highlightPlainText": true,
-    "sync.autoDownload": true,
-    "sync.autoUpload": true,
-    "sync.forceUpload": true,
-    "sync.forceDownload": true,
-    "sync.quietSync": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceUpload": false,
+    "sync.forceDownload": false,
+    "sync.quietSync": false,
     "sync.gist": "a561e6e27acb384dbb04dcd329b84362",
-    "redhat.telemetry.enabled": false,
-    "dart.showSkippedTests": false,
     "workbench.editor.untitled.hint": "hidden",
-    "window.zoomLevel": 1,
     "terminal.integrated.tabs.enabled": true,
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
+    "workbench.editor.wrapTabs": true,
+    "editor.inlineSuggest.enabled": true,
 }
