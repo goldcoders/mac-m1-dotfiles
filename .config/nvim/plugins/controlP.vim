@@ -14,6 +14,11 @@ set wildignore+=*/vendor/**
 set wildignore+=*/node_modules/**
 set wildignore+=*/tags/**
 set wildignore+=*/build/**
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/.git/*
+
 
 
 "Once CtrlP is open:

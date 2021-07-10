@@ -30,6 +30,7 @@ set list
 set hidden
 set cmdheight=2                 " Give more space for displaying messages.
 set timeout timeoutlen=1000 ttimeoutlen=10
+set colorcolumn=80
 
 " Relative or absolute number lines
 function! NumberToggle()
@@ -65,6 +66,7 @@ set fileformats=unix,dos,mac    " Prefer Unix over Windows over OS 9 formats
 set gdefault                    " Use 'g' flag by default with :s/foo/bar/.
 set magic                       " Use 'magic' patterns (extended regular expressions).
 set wildmode=longest,list,full  " Enable autocompletion:
+set wildmenu
 
 "-------------FILE HISTORY--------------"
 set history=1000                " remember more commands and search history
@@ -110,3 +112,18 @@ if &listchars ==# 'eol:$'
   " set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
   set listchars=tab:>\ ,extends:>,precedes:<,nbsp:+
 endif
+
+if has("persistent_undo")
+   let target_path = expand('~/.undodir')
+
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+    let &undodir=target_path
+    set undofile
+endif
+
+nnoremap <F5> :UndotreeToggle<CR>

@@ -25,13 +25,16 @@ inoremap <silent> <C-S>         <C-O>:update<CR>
 nnoremap <C-Z> u
 nnoremap <C-Y> <C-R>
 
-
+" ctrl hjkl as arrow key
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
-nnoremap  <leader>sv :source $MYVIMRC <cr>
+" reload vim config
+nnoremap  <leader><CR> :source $MYVIMRC <cr>
+
+nnoremap <silent> Q <nop>
 
 " Check when plugins Loaded then load their specific key bindings
 if has_key(plugs, 'nerdtree')
