@@ -116,8 +116,8 @@ alias \
 	dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add" \
 	dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status" \
 	dif="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff" \
-    	pus="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push" \
-    	com="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit" \
+    dop="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push" \
+    com="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit" \
 	diff="diff --color=auto" \
 	;
 fi
