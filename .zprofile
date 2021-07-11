@@ -27,3 +27,4 @@ export PATH="$PATH":"$HOME/go/bin"
 source $HOME/.cargo/env
 # this will add the brew x86_64 programs in our path
 export PATH="$PATH":"/usr/local/bin"
+export PATH="$PATH":"$HOME/.local/bin"
