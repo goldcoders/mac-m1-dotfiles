@@ -104,6 +104,9 @@ lfcd () {
 
 bindkey -s '^o' 'lfcd\n'
 
+# run tmux sessionizer
+bindkey -s '^b' 'tmux-sessionizer\n'
+
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
