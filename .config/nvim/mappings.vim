@@ -98,6 +98,11 @@ if has_key(plugs, 'ultisnips')
     source ~/.config/nvim/plugins/ultisnips.vim
 endif
 
+if has_key(plugs, 'vim-flutter')
+    source ~/.config/nvim/plugins/vim-flutter.vim
+endif
+
+
 "source ~/.config/nvim/plug/vimwiki.vim
 "source ~/.config/nvim/plug/grammarous.vim
 "source ~/.config/nvim/plug/treesitter.vim
