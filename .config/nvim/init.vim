@@ -42,6 +42,8 @@ else
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'natebosch/vim-lsc'
   Plug 'natebosch/vim-lsc-dart'
+  " Add Some Useful Flutter Commands
+  Plug 'thosakwe/vim-flutter'
 
   Plug 'tpope/vim-fugitive'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
