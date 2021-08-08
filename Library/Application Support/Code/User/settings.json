@@ -62,7 +62,7 @@
     "emmet.triggerExpansionOnTab": true,
     "eslint.run": "onSave",
     // this will change if we use different version of node in fnm
-    "eslint.runtime": "/var/folders/qs/_5xswr753sg1xk8z6t_hbjgm0000gn/T/fnm_multishell_973_1624265623240/bin/eslint",
+    "eslint.runtime": "/var/folders/qs/_5xswr753sg1xk8z6t_hbjgm0000gn/T/fnm_multishell_1943_1627334802627/bin/eslint",
     "eslint.options": {
         "extensions": [
             ".html",
@@ -72,6 +72,7 @@
         ]
     },
     "eslint.validate": [
+
         "html",
         "vue",
         "javascript",
@@ -213,4 +214,12 @@
     "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
     "workbench.editor.wrapTabs": true,
     "editor.inlineSuggest.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 1,
+    "eslint.codeAction.disableRuleComment": {
+        "enable": false
+    },
+    "eslint.codeAction.showDocumentation": {
+        "enable": false
+    },
 }

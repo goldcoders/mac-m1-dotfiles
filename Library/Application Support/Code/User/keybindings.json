@@ -157,13 +157,8 @@
         "when": "panelFocus"
     },
     {
-        "key": "alt+shift+`",
+        "key": "cmd+`",
         "command": "workbench.action.toggleMaximizedPanel"
-    },
-    {
-        "key": "cmd+f2",
-        "command": "copyRelativeFilePath",
-        "when": "neovim.mode == normal && editorTextFocus",
     },
     {
         "key": "shift+alt+cmd+c",
@@ -203,10 +198,6 @@
         "key": "alt+cmd+k",
         "command": "-bookmarks.toggle",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "cmd+f1",
-        "command": "bookmarks.list"
     },
     {
         "key": "alt+f1",
@@ -274,19 +265,9 @@
         "command": "workbench.action.toggleZenMode"
     },
     {
-        "key": "alt+r",
-        "command": "workbench.action.debug.start",
-        "when": "debuggersAvailable && debugState != 'initializing'"
-    },
-    {
         "key": "f5",
         "command": "-workbench.action.debug.start",
         "when": "debuggersAvailable && debugState != 'initializing'"
-    },
-    {
-        "key": "alt+r",
-        "command": "workbench.action.debug.continue",
-        "when": "inDebugMode"
     },
     {
         "key": "f5",
@@ -304,11 +285,6 @@
         "when": "debuggersAvailable && debugState != 'initializing'"
     },
     {
-        "key": "shift+cmd+r",
-        "command": "dart.rerunLastDebugSession",
-        "when": "dart-code:anyProjectLoaded && dart-code:hasLastDebugConfig && !inDebugMode"
-    },
-    {
         "key": "shift+cmd+f5",
         "command": "-dart.rerunLastDebugSession",
         "when": "dart-code:anyProjectLoaded && dart-code:hasLastDebugConfig && !inDebugMode"
@@ -319,11 +295,11 @@
         "when": "isDevelopment"
     },
     {
-        "key": "ctrl+cmd+r",
+        "key": "shift+cmd+r",
         "command": "dart.runAllTestsWithoutDebugging"
     },
     {
-        "key": "shift+alt+f",
+        "key": "shift+cmd+f",
         "command": "workbench.action.findInFiles"
     },
     {
@@ -331,7 +307,7 @@
         "command": "-workbench.action.findInFiles"
     },
     {
-        "key": "shift+alt+f",
+        "key": "shift+cmd+f",
         "command": "workbench.action.terminal.searchWorkspace",
         "when": "terminalFocus && terminalProcessSupported && terminalProcessSupported && terminalTextSelected"
     },
@@ -341,7 +317,7 @@
         "when": "terminalFocus && terminalProcessSupported && terminalProcessSupported && terminalTextSelected"
     },
     {
-        "key": "shift+alt+f",
+        "key": "shift+cmd+f",
         "command": "workbench.view.search",
         "when": "workbench.view.search.active"
     },
@@ -351,7 +327,7 @@
         "when": "workbench.view.search.active"
     },
     {
-        "key": "alt+f",
+        "key": "shift+alt+f",
         "command": "notebook.formatCell",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
     },
@@ -361,7 +337,7 @@
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
     },
     {
-        "key": "alt+f",
+        "key": "shift+alt+f",
         "command": "editor.action.formatDocument",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
@@ -371,7 +347,7 @@
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
     },
     {
-        "key": "alt+f",
+        "key": "shift+alt+f",
         "command": "editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
@@ -381,7 +357,7 @@
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
     },
     {
-        "key": "alt+f",
+        "key": "shift+alt+f",
         "command": "notebook.format",
         "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
     },
@@ -389,11 +365,6 @@
         "key": "shift+alt+f",
         "command": "-notebook.format",
         "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
-    },
-    {
-        "key": "tab",
-        "command": "tabOutOrReindent",
-        "when": "neovim.mode == insert && editorTextFocus && !editorReadonly && !editorTabMovesFocus && !suggestWidgetVisible && !inSnippetMode"
     },
     {
         "key": "ctrl+cmd+i",
@@ -464,5 +435,260 @@
         "key": "ctrl+alt+e",
         "command": "-namespaceResolver.expand",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "filesExplorer.findInFolder",
+        "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-filesExplorer.findInFolder",
+        "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "alt+cmd+f",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+    },
+    {
+        "key": "cmd+escape",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+cmd+w",
+        "command": "-workbench.action.closeWindow"
+    },
+    {
+        "key": "shift+cmd+w",
+        "command": "workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "cmd+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.view.extension.test"
+    },
+    {
+        "key": "cmd+b",
+        "command": "workbench.view.extension.bookmarks"
+    },
+    {
+        "key": "alt+r",
+        "command": "debug.openView",
+        "when": "!debuggersAvailable"
+    },
+    {
+        "key": "f5",
+        "command": "-debug.openView",
+        "when": "!debuggersAvailable"
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "cmd+r",
+        "command": "flutter.hotRestart"
+    },
+    {
+        "key": "cmd+f3",
+        "command": "-editor.action.nextSelectionMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+f2",
+        "command": "-editor.action.changeAll",
+        "when": "editorTextFocus && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-rerunSearchEditorSearch",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+cmd+r",
+        "command": "dart.runAllFailedTestsWithoutDebugging"
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "dart.runAllSkippedTestsWithoutDebugging"
+    },
+    {
+        "key": "cmd+e",
+        "command": "dart.runTestAtCursor"
+    },
+    {
+        "key": "cmd+f4",
+        "command": "copyFilePath"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-copyFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "shift+cmd+,",
+        "command": "-editor.action.inPlaceReplace.up",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+.",
+        "command": "-editor.action.inPlaceReplace.down",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+space",
+        "command": "toggleSuggestionDetails",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.autoFix",
+        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+    },
+    {
+        "key": "alt+cmd+.",
+        "command": "-editor.action.autoFix",
+        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "cmd+f1",
+        "command": "revealInExplorer"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-editor.showOutgoingCalls",
+        "when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-editor.showIncomingCalls",
+        "when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-editor.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-gitlens.showQuickRepoHistory",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-references-view.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+d",
+        "command": "-extension.downloadSettings"
+    },
+    {
+        "key": "cmd+f2",
+        "command": "editor.action.showContextMenu",
+        "when": "textInputFocus"
     },
 ]
