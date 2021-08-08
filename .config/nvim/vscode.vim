@@ -6,7 +6,9 @@ nnoremap <silent> qf :<C-u>call VSCodeNotify('keyboard-quickfix.openQuickFix')<C
 nnoremap <silent> R :<C-u>call VSCodeNotify('editor.action.rename')<CR>
 nnoremap <silent> gr :<C-u>call VSCodeNotify('editor.action.goToReferences')<CR>
 
-nnoremap <silent> gd <Cmd>call VSCodeNotify('editor.action.revealDefinitionAside')<CR>
-nnoremap <silent> S <Cmd>call VSCodeNotify('editor.action.startFindReplaceAction')<CR>
+nnoremap <silent> gd <Cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+nnoremap <silent> gD <Cmd>call VSCodeNotify('editor.action.peekDefinition')<CR>
 nnoremap <silent> F <Cmd>call VSCodeNotify('Find')<CR>
+imap <tab> <Cmd>call VSCodeNotify('github.copilot.autocompleteAccepted')<CR>
+
 
