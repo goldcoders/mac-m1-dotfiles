@@ -65,7 +65,7 @@ fi
 if [ -x "$(command -v youtube-dl)" ]; then
 alias \
     yt="youtube-dl --add-metadata -i" \
-    yt4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+    yt4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -x -f bestaudio/best --audio-format mp3" \
 	;
 fi
@@ -74,6 +74,13 @@ fi
 if [ -x "$(command -v mpv)" ]; then
 alias \
     mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)" \
+    mp3="ncmpcpp" \
+    ;
+fi
+
+if [ -x "$(command -v ncmpcpp)" ]; then
+alias \
+    mp3="ncmpcpp" \
     ;
 fi
 
@@ -231,6 +238,7 @@ alias dbdown='mysql.server stop'
 alias dbauth='mysql -u uriah -proot'
 alias fpm='/opt/homebrew/opt/php/sbin/php-fpm --nodaemonize'
 alias phpini='$EDITOR /opt/homebrew/etc/php/8.0/php.ini'
+alias phpini7='$EDITOR /opt/homebrew/etc/php/7.4/php.ini'
 alias redisup='redis-server /opt/homebrew/etc/redis.conf'
 alias redisdown='redis-cli shutdown'
 alias tinker='php artisan tinker'
