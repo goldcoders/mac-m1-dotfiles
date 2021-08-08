@@ -2,6 +2,7 @@ export EDITOR="nvim"
 export FILE="ranger"
 export PASSWORD_STORE_DIR="$HOME/.password-store"
 export PASSWORD_STORE_CLIP_TIME=45
+export DARTBIN="dart"
 
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
@@ -13,7 +14,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # dart specific paths when using FVM
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH="$PATH":"$HOME/fvm/default/bin"
+# use proper dart binary
+if [[ ${DARTBIN} == 'dart' ]]; then
+ export PATH="$PATH:$HOME/fvm/default/bin"
+ else
+ export PATH="$HOME/fvm/default/bin:$PATH"
+fi
 
 # To use Android SDK Commandline tools add the ff. paths
 export PATH="$PATH":"$HOME/Library/Android/sdk/platform-tools"

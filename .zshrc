@@ -123,6 +123,17 @@ function lv() {
     curl -s "https://laravel.build/$@?with=mariadb,redis,mailhog" | bash
 }
 
+# allow us to switch dart binary quickly
+function dartbin(){
+    if [[ ${DARTBIN} == 'dart' ]]; then
+    sed -i -e "s/^export DARTBIN=\"dart\"$/export DARTBIN=\"flutter\"/" ~/.zprofile
+    else
+    sed -i -e "s/^export DARTBIN=\"flutter\"$/export DARTBIN=\"dart\"/" ~/.zprofile
+    fi
+    source ~/.zprofile
+    which dart
+}
+
 eval "$(starship init zsh)"
 
 [ -f "$HOME/.config/aliasrc.sh" ] && source "$HOME/.config/aliasrc.sh"
@@ -132,7 +143,6 @@ eval "$(fnm env)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 eval "$(zoxide init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
