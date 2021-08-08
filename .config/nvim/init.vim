@@ -17,6 +17,9 @@ Plug 'preservim/nerdcommenter'
 " Global Shared Settings
 set clipboard=unnamedplus       " Use the Global Clipboard with Vim
 
+" yank till end of line
+nnoremap Y y$
+
 if exists('g:vscode')
   source ~/.config/nvim/vscode.vim
 else
