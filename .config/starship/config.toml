@@ -14,12 +14,15 @@ $nodejs\
 $php\
 $rust\
 $cmd_duration\
+$package\
 $line_break\
 $battery\
 $status\
 $character"""
 
-add_newline = false
+
+
+add_newline = true
 
 [line_break]
 disabled = false
@@ -33,19 +36,12 @@ discharging_symbol = "⚡"
 threshold = 15
 style = "bold red"
 
-[character]
-symbol = "$symbol "
-success_symbol = "[❯](bold green)"
-error_symbol = "[❮](bold red)"
-vicmd_symbol = "[❮](bold green)"
-disabled = false
-
 [directory]
 truncation_length = 5
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = ""
+symbol = "🌱"
 style = "bold purple"
 truncation_symbol = "…"
 truncation_length = "2^63 - 1"
@@ -83,28 +79,46 @@ disabled = false
 [username]
 style_user = "yellow bold"
 style_root = "magenta bold"
-format = "[$user]($style) "
 disabled = false
 show_always = true
 
 [nodejs]
-symbol = "\ue718 "
-disabled = true
+version_format = "v${raw}"
+symbol = " "
+format = "via [$symbol$version](bold green) "
+disabled = false
 
 [golang]
 symbol = "🐹 "
-disabled = true
+format = "via [$symbol$version](bold cyan) "
+disabled = false
 
 [php]
-symbol = " "
-disabled = true
+symbol = "🐘"
+format = " [$symbol$version](147 bold) "
+disabled = false
 
 [rust]
 symbol = "🦀 "
+format = " [$symbol$version](red bold)"
+disabled = false
+
+
+[dotnet]
 disabled = true
 
 [dart]
-format = "via [$symbol$version]($style) "
+format = " [$symbol$version]($style) "
 symbol = "🎯 "
 style = "bold blue"
-disabled = true
+disabled = false
+
+[package]
+format = "[📦 $version](208 bold) "
+
+[time]
+disabled = false
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+utc_time_offset = "-5"
+time_range = "10:00:00-14:00:00"
