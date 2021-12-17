@@ -1,20 +1,18 @@
-let mapleader = ','
 let maplocalleader = '\'
 
+nnoremap <F3> :set hlsearch!<CR>
 " Prevent CTRL+Z suspending Vim
 nnoremap <c-z> <nop>
 
 " Search and Replace
 nnoremap S :%s//g<Left><Left>
 
-" set cursorcolumn
+" set cursor column
 vmap <BS> x
 
 "Pasting large amounts of text into Vim "
 set pastetoggle=<F2>
 
-nnoremap <F3> :set hlsearch!<CR>
-nnoremap <leader><space> :set nohlsearch<CR>
 
 " Save File
 noremap <silent> <C-S>          :update<CR>

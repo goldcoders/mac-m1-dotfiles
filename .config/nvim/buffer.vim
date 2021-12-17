@@ -5,7 +5,6 @@ nmap <silent> bl :ls<CR>
 nmap <silent>bd :bp <BAR> bd #<CR> " Delete Buffer
 
 
-
 " Delete All Buffers Except the Current One Being Edit
 nnoremap <silent>bq :w <bar> %bd <bar> e# <bar> bd# <CR>
 " map :q to byffer delete

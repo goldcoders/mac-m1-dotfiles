@@ -75,14 +75,6 @@ set autowrite                   " Automatically save before :next, :make etc.
 set noswapfile                  " Don't use swapfile
 set nobackup            	      " Don't create annoying backup files
 
-"-------------SEARCH--------------"
-highlight Search cterm=underline
-set showmatch                   " Do not show matching brackets by flickering
-set incsearch                   " Shows the match while typing
-set hlsearch                    " Highlight found searches
-set ignorecase                  " Search case insensitive...
-set smartcase                   " ... but not when search pattern contains upper case characters
-
 "-------------TABS--------------"
 
 set smarttab

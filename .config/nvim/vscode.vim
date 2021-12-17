@@ -11,4 +11,3 @@ nnoremap <silent> gD <Cmd>call VSCodeNotify('editor.action.peekDefinition')<CR>
 nnoremap <silent> F <Cmd>call VSCodeNotify('Find')<CR>
 imap <tab> <Cmd>call VSCodeNotify('github.copilot.autocompleteAccepted')<CR>
 
-
