@@ -4,7 +4,7 @@
 
 ## GUI Apps
 - Alfred V4 (Update Workflow with pass)
-- Swish (Easy Tiling)
+- Swish (Easy Tiling) (replaced by yabai +skhd)
 - Dash
 - Drop Over (Drag and Drop Files)
 - Aldente (Battery Management)
