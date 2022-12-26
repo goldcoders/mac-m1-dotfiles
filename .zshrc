@@ -15,9 +15,9 @@ fi
 
 plugins=(
 #  alias-finder
-  fast-syntax-highlighting
-  zsh-autosuggestions
-  zsh-completions
+#  fast-syntax-highlighting
+#  zsh-autosuggestions
+#  zsh-completions
   zoxide
 #  command-not-found
 )
@@ -59,6 +59,13 @@ zmodload zsh/complist
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
 
+# Use beam shape cursor on startup.
+#echo -ne '\e[5 q'
+# Use beam shape cursor for each new prompt.
+#preexec() { echo -ne '\e[5 q' ;}
+
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+##### WHAT YOU WANT TO DISABLE FOR WARP - BELOW
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -83,6 +90,7 @@ function zle-keymap-select {
     echo -ne '\e[5 q'
   fi
 }
+
 zle -N zle-keymap-select
 
 zle-line-init() {
@@ -91,12 +99,7 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-# Use beam shape cursor on startup.
-echo -ne '\e[5 q'
-# Use beam shape cursor for each new prompt.
-preexec() { echo -ne '\e[5 q' ;}
-
-# Use lf to switch directories and bind it to ctrl-o
+#Use lf to switch directories and bind it to ctrl-o
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -114,7 +117,6 @@ lfcd () {
 # Easily Navigate
 bindkey -s '^o' 'lfcd\n'
 
-
 # Edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -127,12 +129,12 @@ zle self-insert
 
 zle -N expand-alias
 bindkey -M main ' ' expand-alias
-
-
+##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
+fi
 
 # Added for pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 eval "$(fnm env)"
 eval "$(starship init zsh)"
 
@@ -157,5 +159,27 @@ source "$HOME/.config/aliasrc.sh"
 #export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
 # https://stackoverflow.com/questions/44803721/how-to-brew-install-specific-version-of-node
 
+
 # Generated for envman. Do not edit.
-#[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+
+#export CPPFLAGS="-I/opt/homebrew/opt/postgresql@12/include"
+#export LDFLAGS="-L/opt/homebrew/opt/postgresql@12/lib"
+#export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
+
+alias rom='cd ~/rubyonmac && /usr/bin/env bash ~/rubyonmac/rom-prime 2>&1 | tee ~/rubyonmac/logs/rom-prime-normal.log'
+
+alias romup='cd ~/Downloads/rubyonmac-prime && /usr/bin/env bash ~/Downloads/rubyonmac-prime/update'
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+
+#chruby ruby-2.7.7
+
+chruby ruby-2.7.7
+
+eval "$(nodenv init -)"
+
+nodenv global 16.18.1
