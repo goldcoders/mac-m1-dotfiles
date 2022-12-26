@@ -1,11 +1,3 @@
-[2021-04-22 15:53] power
-
-[2021-04-22 15:53] arch "power"
-
-[2021-04-22 15:54] arch power
-
-[2021-04-22 21:50] enable power
-
 [2021-04-23 11:09] # list of all alfred workflows
 http://www.packal.org/workflow/search-snippetslab
 
