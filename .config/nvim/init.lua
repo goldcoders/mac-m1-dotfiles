@@ -1,0 +1,30 @@
+require("globals")
+require("vim_g")
+require("settings")
+require("mappings")
+require("autocmd")
+-- Install Plugins
+require("packages")
+-- Init Plugins
+require("theme")
+require("plugins/transparency")
+require("plugins/commenter")
+require("plugins/marks")
+require("plugins/hop")
+require("plugins/statusline")
+require("plugins/nvim-autopairs")
+require("plugins/bufferline")
+require("plugins/nvim-colorizer")
+require("plugins/nvim-tree")
+require("plugins/treesitter")
+require("plugins/gitsigns")
+-- Auto Completions and LSP
+require("plugins/cmp")
+require("plugins/telescope")
+require("plugins/rusty-tools")
+require("plugins/dap-ui")
+require("plugins/cargo_crates")
+--! Uncomment to Enable Tabnine
+--! require("plugins/tabnine")
+--!  Uncomment to Enable Copilot
+--! require("plugins/github_copilot")
