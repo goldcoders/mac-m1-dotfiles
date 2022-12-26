@@ -15,9 +15,9 @@ alias \
     mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)" \
     mp3="ncmpcpp" \
     mp3="ncmpcpp" \
-    yt="youtube-dl --add-metadata -i" \
-    yt4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
-    yta="yt -x -f bestaudio/best --audio-format mp3" \
+    yt="yt-dlp --add-metadata -i" \
+    yt4="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
+    yta="yt-dlp -x -f bestaudio/best --audio-format mp3" \
     ;
 # Git
 alias \
@@ -35,10 +35,13 @@ alias \
     dots="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status" \
     dif="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff" \
     dop="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push" \
+    dpull="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull" \
     com="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit" \
     sdif="sudo nvim -d" \
     diff="nvim -d" \
     gcs='git clone --depth 1 --filter=blob:none --sparse' \
+    vim6='/Users/uriah/Downloads/nvim-osx64/bin/nvim' \
+    v='nvim'\
     ;
 
 # Common Utils
@@ -128,7 +131,7 @@ alias \
     cfk="$EDITOR ~/Library/Application\ Support/Code/User/keybindings.json" \
     cfp="$EDITOR ~/.zprofile" \
     cfs="$EDITOR ~/.config/starship/config.toml" \
-    cfv="$EDITOR ~/.config/nvim/init.vim" \
+    cfv="$EDITOR ~/.config/nvim/init.lua" \
     cfr="$EDITOR ~/.config/ranger/rifle.conf" \
     cfz="$EDITOR $HOME/.zshrc" \
     etc="$EDITOR /etc/hosts" \
@@ -150,6 +153,7 @@ alias \
     rz='source ~/.zshrc' \
     rv='source ~/.config/nvim/init.vim' \
     rt="tmux source-file ~/.tmux.conf" \
+    j='jrnl' \
     ;
 
 
@@ -165,20 +169,103 @@ alias \
     ios='open ios/Runner.xcworkspace' \
     rmswp='rm ~/.local/share/nvim/swap/*.swp' \
     sim='open -a Simulator' \
-    ibrew='arch -x86_64 /usr/local/bin/brew' \
+    ibrew='arch -x86_64 /usr/local/Homebrew/bin/brew' \
     pgup='pg_ctl -D /opt/homebrew/var/postgres start' \
+    pg12='/opt/homebrew/opt/postgresql@12/bin/postgres -D /opt/homebrew/var/postgresql@12' \
     pgdown='pg_ctl -D /opt/homebrew/var/postgres stop -s -m fast' \
     pgauth='psql -h localhost -d postgres -U postgres -W' \
     dbup='mysql.server start' \
     dbdown='mysql.server stop' \
-    dbauth='mysql -u uriah -proot' \
+    dbauth='mysql -u uriah -psecret' \
     fpm='/opt/homebrew/opt/php/sbin/php-fpm --nodaemonize' \
     phpini='$EDITOR /opt/homebrew/etc/php/8.0/php.ini' \
     phpini7='$EDITOR /opt/homebrew/etc/php/7.4/php.ini' \
     redisup='redis-server /opt/homebrew/etc/redis.conf' \
     redisdown='redis-cli shutdown' \
     px="./.venv/bin/python" \
+    flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder" \
+    irun="xcrun simctl openurl booted" \
     ;
+
+################################################################
+### Laravel Specific Aliases
+################################################################
+function artisan() {
+   if [ -f bin/artisan ]; then
+     php bin/artisan "$@"
+   else
+     php artisan "$@"
+   fi
+ }
+
+function fport(){
+lsof -i:$@
+}
+
+alias \
+    art='artisan' \
+    tinker='artisan tinker' \
+    serve='artisan serve' \
+    p='phpunit' \
+    pf='phpunit --filter' \
+    migrate='artisan migrate' \
+    fresh='artisan migrate:refresh --seed' \
+    ;
+################################################################
+### RUST Specific Command Aliases
+################################################################
+
+function neovide(){
+    ARG="${1:-.}"
+    CUR="$(pwd)"
+    FILE="${CUR}/${ARG}"
+    open -a Neovide.app --args $FILE
+}
+
+#/opt/homebrew/opt/postgresql@12/bin/postgres -D /opt/homebrew/var/postgresql@12 &
+function wcserve(){
+pg_ctlcluster 12 main start &
+php artisan queue:listen --queue=high,default --timeout=3600 --tries=3 --delay=3 &
+}
+
+function dbreset(){
+dropdb watchcrunch_test
+createdb watchcrunch_test
+psql watchcrunch_test < wcstaging.sql
+}
+
+function todo(){
+jrnl todo < ~/Journals/todo-template.txt
+jrnl todo -1 --edit
+}
+
+function todos() {
+jrnl todo --edit
+}
+
+function todolist(){
+    ARG="${1:-10}"
+    jrnl todo -n $ARG
+}
+
+function todosearch(){
+    jrnl todo -contains $@
+}
+
+function starred(){
+    jrnl todo -starred
+}
+
+function tag(){
+    jrnl todo -n 10 $@
+}
+
+function tags(){
+    jrnl todo --tags
+}
+function todorm(){
+    jrnl todo --delete
+}
 
 # default user in postgres is account name with no password
 #alias pgauth='psql -h localhost'

@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "**/plugged": true,
+    "**/autoload": true,
+    "**/plugin": true,
+  },
+}
