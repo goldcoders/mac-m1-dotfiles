@@ -44,12 +44,10 @@ format = "[$symbol$branch]($style) "
 symbol = "🌱"
 style = "bold purple"
 truncation_symbol = "…"
-truncation_length = "2^63 - 1"
 
 [git_commit]
 format = "[#$hash]($style) "
 style = "bold green"
-commit_hash_length = "7"
 only_detached = false
 disabled = false
 
